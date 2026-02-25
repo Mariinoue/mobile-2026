@@ -1,20 +1,21 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
 
-export default function App() {
+import { View, Text, TextInput, Button } from "react-native";
+
+function Principal() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View style={{ flex: 1, marginTop: 40, alignItems: "center" }}>
+      <Text style={{ fontSize: 32, marginBottom: 25 }}>Pizzaria - gestão do Cardapio</Text>
+      <Text>Sabor da Pizza:</Text>
+      <TextInput style={{ backgroundColor: "#a7c4f0ff" }} />
+      <Text>Valor:</Text>
+      <TextInput style={{ backgroundColor: "#a7c4f0ff" }} />
+      <Text>Ingredientes:</Text>
+      <TextInput style={{ backgroundColor: "#a7c4f0ff" }} />
+
+      <Button title="Salvar" />
+
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default Principal;
